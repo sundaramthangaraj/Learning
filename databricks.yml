@@ -1,0 +1,21 @@
+resources:
+  jobs:
+    My_first_job_1:
+      name: My_first_Job_1
+      tasks:
+        - task_key: test
+          spark_python_task:
+            python_file: test1.py
+            source: GIT
+          environment_key: Default
+      git_source:
+        git_url: https://github.com/sundaramthangaraj/Learning
+        git_provider: gitHub
+        git_branch: main
+      queue:
+        enabled: true
+      environments:
+        - environment_key: Default
+          spec:
+            environment_version: "4"
+      performance_target: PERFORMANCE_OPTIMIZED
