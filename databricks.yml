@@ -1,3 +1,5 @@
+bundle:
+  name: my_first_bundle
 resources:
   jobs:
     My_first_job_1:
